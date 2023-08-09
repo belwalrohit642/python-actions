@@ -54,8 +54,8 @@ jobs:
           TARGET: ${{ secrets.TARGET_DIR }}
       - name: Install dependencies on EC2
         run: |
-          ssh -i $SSH_PRIVATE_KEY $REMOTE_USER@$REMOTE_HOST 'cd $ && pip install -r requirements.txt'
+          ssh -i ${{ env.SSH_PRIVATE_KEY }} ${{ env.REMOTE_USER }}@${{ env.REMOTE_HOST }} 'cd ${{ env.TARGET }} $ && pip install -r requirements.txt'
        
       - name: Run the Python application on EC2
         run: |
-          ssh -i $SSH_PRIVATE_KEY $REMOTE_USER@$REMOTE_HOST  'cd $TARGET && python3 app.py'
+            ssh -i ${{ env.SSH_PRIVATE_KEY }} ${{ env.REMOTE_USER }}@${{ env.REMOTE_HOST }} 'cd ${{ env.TARGET }}/src && python3 app.py'
