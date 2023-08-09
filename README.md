@@ -46,7 +46,10 @@ After then, add secrets to GitHub such as SSH_PRIVATE_KEY,HOST_DNS,USERNAME,TARG
 ![Screenshot from 2023-08-09 21-50-11](https://github.com/belwalrohit642/python-actions/assets/96739082/33cfce63-b9b3-49ae-81cc-f1260b9368aa)
 <br>
 
-Now Go to the Actions in the GitHub to check the  build and deploy.
+Now Go to the Actions in the GitHub to check the  build and deploy.<br>
+<br>
+![Screenshot from 2023-08-09 22-00-46](https://github.com/belwalrohit642/python-actions/assets/96739082/cf8e039c-b0f2-4b51-91e8-88e8fe7dcd4e)
+
 
 
 
