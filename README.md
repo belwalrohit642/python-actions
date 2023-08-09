@@ -32,11 +32,12 @@ To use this workflow, ensure that the following secrets are configured in your G
 4- TARGET_DIR: Directory on the EC2 server where the application will be deployed.<br>
 <br>
 
+
 # FLOW OF EXECUTION<br>
 
-Firstly build and test the hello app locally. <br>
+Firstly create a EC2 instance manually from aws management clone<br>
+![Screenshot from 2023-08-09 21-46-39](https://github.com/belwalrohit642/python-actions/assets/96739082/71da7353-e813-4c3b-a02b-a01486d9adb2)<br>
 
-![py1](https://github.com/belwalrohit642/python-actions/assets/96739082/4b2f9a0a-7f23-4d50-b205-3cf8e4df59a2)<br>
 
 
 
