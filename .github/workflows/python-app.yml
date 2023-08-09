@@ -58,4 +58,5 @@ jobs:
        
       - name: Run the Python application on EC2
         run: |
-            ssh -i ${{ env.SSH_PRIVATE_KEY }} ${{ env.REMOTE_USER }}@${{ env.REMOTE_HOST }} 'cd ${{ env.TARGET }}/src && python3 app.py'
+            export PYTHONPATH=src
+            ssh -i ${{ env.SSH_PRIVATE_KEY }} ${{ env.REMOTE_USER }}@${{ env.REMOTE_HOST }} 'cd ${{ env.TARGET }} && python3 app.py'
