@@ -49,5 +49,4 @@ jobs:
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
-          ssh-keygen -R 54.159.59.221
           scp -i key.pem -r ./python-actions ubuntu@54.159.59.221:/home/ubuntu/python-actions
