@@ -49,7 +49,11 @@ After then, add secrets to GitHub such as SSH_PRIVATE_KEY,HOST_DNS,USERNAME,TARG
 Now Go to the Actions in the GitHub to check the  build and deploy.<br>
 <br>
 ![Screenshot from 2023-08-09 22-00-46](https://github.com/belwalrohit642/python-actions/assets/96739082/cf8e039c-b0f2-4b51-91e8-88e8fe7dcd4e)
-
+<br>
+As you see the pipeline is executed successfully,Now check in the AWS EC2 instance that the Hello app is running.
+<br>
+![Screenshot from 2023-08-09 22-03-05](https://github.com/belwalrohit642/python-actions/assets/96739082/4423e52b-f908-4c36-99f2-8d0ae5a4236c)
+<br>
 
 
 
