@@ -31,3 +31,35 @@ To use this workflow, ensure that the following secrets are configured in your G
 3- USERNAME: Username to use when connecting to the EC2 server.<br>
 4- TARGET_DIR: Directory on the EC2 server where the application will be deployed.<br>
 <br>
+
+# FLOW OF EXECUTION<br>
+
+Firstly build and test the hello app locally. <br>
+
+![py1](https://github.com/belwalrohit642/python-actions/assets/96739082/4b2f9a0a-7f23-4d50-b205-3cf8e4df59a2)<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
