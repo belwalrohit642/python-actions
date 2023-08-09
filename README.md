@@ -44,6 +44,9 @@ Firstly create an EC2 instance manually from the AWS management clone in which t
 After then, add secrets to GitHub such as SSH_PRIVATE_KEY,HOST_DNS,USERNAME,TARGET_DIR.<br>
 <br>
 ![Screenshot from 2023-08-09 21-50-11](https://github.com/belwalrohit642/python-actions/assets/96739082/33cfce63-b9b3-49ae-81cc-f1260b9368aa)
+<br>
+
+Now Go to the Actions in the GitHub to check the  build and deploy.
 
 
 
