@@ -60,6 +60,7 @@ jobs:
       - name: Install dependencies on EC2
         run: |
           ssh -i key.pem ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} "cd ${{ secrets.TARGET_DIR }} && pip install -r requirements.txt"
+          ssh -i key.pem ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} "cd ${{ secrets.TARGET_DIR }} && pip install -r system_requirements.txt"
       - name: Run the Python application on EC2
         run: |
             export PYTHONPATH=src
