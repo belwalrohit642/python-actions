@@ -53,4 +53,4 @@ jobs:
       - name: Deploy to EC2
         run: |
           # Replace EC2_IP_ADDRESS with your instance's IP
-          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@54.159.59.221 "cd /home/ubuntu/python-actions && git pull && python app.py"
+           ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@54.159.59.221 "cd /home/ubuntu/python-actions && git pull && python app.py"
