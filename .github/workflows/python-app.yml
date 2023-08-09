@@ -64,4 +64,4 @@ jobs:
 
       - name: Run the Python application on EC2
         run: |
-            ssh -i key.pem ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} "cd ${{ secrets.TARGET_DIR }}  && export PYTHONPATH=src && python3 app.py"
+            ssh -i key.pem ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} "cd ${{ secrets.TARGET_DIR }}  && export PYTHONPATH=/home/ubuntu/src && python3 app.py"
