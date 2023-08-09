@@ -14,7 +14,7 @@ The "build" job is responsible for setting up the Python environment, installing
 4- Lint with flake8: This step performs linting using flake8 to identify syntax errors and undefined names in the code. It generates a summary of the linting statistics and source code references.<br>
 5- Test with pytest: This step runs tests using pytest. It sets the PYTHONPATH to include the 'src' directory and executes the tests.<br>
 <br>
-#Deploy Job<br>
+# Deploy Job<br>
 The "deploy" job deploys the Python application to an EC2 server upon successful execution of the "build" job.<br>
 <br>
 1- Checkout Files: This step checks out the repository code again to ensure the latest changes are available for deployment.<br>
