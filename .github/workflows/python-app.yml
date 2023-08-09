@@ -47,4 +47,4 @@ jobs:
        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
-        scp -i key.pem -r ./python-actions ubuntu@34.229.13.200:/home/ubuntu/python-actions
+         scp -i key.pem -r ./python-actions ubuntu@34.229.13.200:/home/ubuntu/python-actions
