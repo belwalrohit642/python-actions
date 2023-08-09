@@ -37,14 +37,20 @@ jobs:
       run: |
         export PYTHONPATH=src
         pytest
-    - name: Set up SSH key
-      run: |
-       echo "$SSH_PRIVATE_KEY" > key.pem
-       chmod 600 key.pem
+        
+  deploy:
+    runs-on: ubuntu-latest
 
-    - name: Deploy to EC2
-      env:
-       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: |
-          scp -i key.pem -r ./python-actions ubuntu@54.159.59.221:/home/ubuntu/python-actions
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to EC2
+        run: |
+          # Replace EC2_IP_ADDRESS with your instance's IP
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@54.159.59.221 "cd /home/ubuntu/python-actions && git pull && python app.py"
