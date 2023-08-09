@@ -42,7 +42,7 @@ jobs:
     
     - name: Set up SSH key
       run: |
-          echo "$SSH_PRIVATE_KEY" > key.pem
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
           chmod 600 key.pem
     
     - name: Deploy to EC2
