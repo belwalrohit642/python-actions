@@ -41,6 +41,8 @@ jobs:
       run: |
        echo "$SSH_PRIVATE_KEY" > key.pem
        chmod 600 key.pem
+       ssh-keygen -R 54.159.59.221
+
 
     - name: Deploy to EC2
       env:
