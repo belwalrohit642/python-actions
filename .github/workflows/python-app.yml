@@ -52,4 +52,10 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
+      - name: Install dependencies on EC2
+        run: |
+          ssh -i ${{ secrets.EC2_SSH_KEY }} ${USERNAME}@${{ secrets.HOST_DNS }} 'cd ${{ secrets.TARGET_DIR }} && pip install -r requirements.txt'
        
+      - name: Run the Python application on EC2
+        run: |
+          ssh -i ${{ secrets.EC2_SSH_KEY }} ${USERNAME}@${{ secrets.HOST_DNS }} 'cd ${{ secrets.TARGET_DIR }} && python3 app.py'
