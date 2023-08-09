@@ -21,9 +21,7 @@ The "deploy" job deploys the Python application to an EC2 server upon successful
 2- Deploy to Server: This step uses the easingthemes/ssh-deploy action to deploy files to the target EC2 server. It requires SSH access to the server, which is provided through the EC2_SSH_KEY, HOST_DNS, and USERNAME secrets.<br>
 3- Prepare SSH Key: This step prepares the SSH private key by creating a key.pem file and setting the appropriate permissions.<br>
 4- Install Dependencies on EC2: This step connects to the EC2 server using SSH, updates the package list, and installs python3-pip. It then navigates to the target directory and installs the application's dependencies using the requirements.txt file.<br>
-5- Run the Python Application on EC2: This step connects to the EC2 server via SSH and starts the Python application by executing python3 ~/src/app.py in the target directory. The application is run in the background using the
-![Screenshot from 2023-08-09 21-50-11](https://github.com/belwalrohit642/python-actions/assets/96739082/33cfce63-b9b3-49ae-81cc-f1260b9368aa)
- & operator.<br>
+5- Run the Python Application on EC2: This step connects to the EC2 server via SSH and starts the Python application by executing python3 ~/src/app.py in the target directory. The application is run in the background using the & operator.<br>
 <br>
 # Secret Requirements<br>
 To use this workflow, ensure that the following secrets are configured in your GitHub repository:<br>
