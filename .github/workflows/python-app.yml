@@ -50,7 +50,6 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
-           ssh-keyscan -H ${{ secrets.EC2_IP }} >> ~/.ssh/known_hosts
            scp -i  key.pem -r ./python-actions ubuntu@${{ secrets.EC2_IP }}:/home/ubuntu/python-actions  
            ssh -i key.pem ubuntu@${{ secrets.EC2_IP }} 'cd /home/ubuntu/python-actions && python3 app.py'  
 
