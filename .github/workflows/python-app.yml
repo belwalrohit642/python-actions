@@ -1,5 +1,6 @@
 
 
+
 name: Python application
 
 on:
@@ -50,7 +51,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
-           scp -i  key.pem -r ./python-actions ubuntu@${{ secrets.EC2_IP }}:/home/ubuntu/python-actions  
+           scp -i ssh_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ./python-actions ubuntu@54.159.59.221:/home/ubuntu/python-actions
            ssh -i key.pem ubuntu@${{ secrets.EC2_IP }} 'cd /home/ubuntu/python-actions && python3 app.py'  
 
 
